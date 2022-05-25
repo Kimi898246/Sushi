@@ -5,7 +5,7 @@ const lewd = new NSFW();
 module.exports = {
     name: "hentai",
     run: async (client, message, args) => {
-      if(!message.channel.nsfw) return message.channel.send("Channel is not NSFW");
+      if(!message.channel.nsfw && message.channel.id != '970054253525733386') return message.channel.send("Channel is not NSFW");
         const image = await lewd.hentai();
 
         const embed = new Discord.MessageEmbed()
